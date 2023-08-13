@@ -2,7 +2,7 @@
 v: 0
 micros:
   - name: player-ui
-    src: ./*
+    src: ./
     engine: custom
     primary: true
     public_routes:
