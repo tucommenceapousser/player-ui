@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon" />
+  <title>Player Ui - Nava</title>
+</head>
+
+<body>
+  <div class="container-0">
+    <div class="container-1 video-container paused" data-volume-level="high">
+      <div class="video-controls-container">
+        <div class="timeline-container">
+          <div class="timeline">
+            <div class="thumb-indicator"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="play-pause-btn">
+            <svg class="play-icon" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8, 5.14V19.14L19,12.14L8,5.14Z" />
+            </svg>
+            <svg class="pause-icon"  viewBox="0 0 24 24">
+              <path fill="currentColor" d="M14, 19H18V5H14M6, 19H10V5H6V19Z" />
+            </svg>
+            <svg class="reset-icon" preserveAspectRatio="xMidYMin" viewBox="0 0 24 24" color="currentColor" stroke="currentColor" stroke-width="2" fill="transparent">
+            <path d="M22.9999 4.00001V10M22.9999 10H16.9999M22.9999 10L18.3699 5.64001C16.9905 4.25975 15.1999 3.3652 13.2678 3.09116C11.3358 2.81711 9.36705 3.17843 7.65823 4.12065C5.94942 5.06288 4.59313 6.53496 3.79374 8.31508C2.99436 10.0952 2.79519 12.0869 3.22625 13.9901C3.6573 15.8932 4.69524 17.6047 6.18363 18.8667C7.67203 20.1286 9.53026 20.8726 11.4783 20.9866C13.4263 21.1006 15.3586 20.5783 16.984 19.4985C18.6094 18.4187 19.8399 16.8399 20.4899 15" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="volume-container">
+            <button class="mute-btn">
+              <svg class="volume-high-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+              </svg>
+              <svg class="volume-low-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5,9V15H9L14,20V4L9,9M18.5,12C18.5,10.23 17.5,8.71 16,7.97V16C17.5,15.29 18.5,13.76 18.5,12Z" />
+              </svg>
+              <svg class="volume-muted-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z" />
+              </svg>
+            </button>
+            <input class="volume-slider" type="range" min="0" max="1" step="any" value="1">
+          </div>
+          <div class="duration-container">
+            <div class="current-time">0:00</div>
+            /
+            <div class="total-time"></div>
+          </div>
+          <button class="speed-btn wide-btn">
+            1x
+          </button>
+          <button class="mini-player-btn">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zm-10-7h9v6h-9z"/>
+            </svg>
+          </button>
+          <button class="theater-btn">
+            <svg class="tall" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 6H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H5V8h14v8z"/>
+            </svg>
+            <svg class="wide" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 7H5c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 8H5V9h14v6z"/>
+            </svg>
+          </button>
+          <button class="full-screen-btn">
+            <svg class="open" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+            </svg>
+            <svg class="close" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <video class="video-output" id="video-player" src="16.mp4">video is not supported on your browser</video>
+    </div>
+    <div class="container-2" id="container2">
+      <header id="video-name">some video 1 detail</header>
+      <div><button class="btn" id="autoplayBtn" onclick="toggleAutoplay()">auto play</button><button class="btn" id="loopBtn" onclick="toggleLoop()">loop</button><button class="btn" id="autonextBtn" onclick="toggleNext()">auto next</button><button class="btn btn-active" id="autosaveBtn" onclick="toggleSave()">auto save</button></div>
+      <p>Made by Nava10Y, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis est non massa consequat tristique. In sed massa ligula. Donec vitae auctor purus. Quisque quis pulvinar elit, at eleifend erat. Suspendisse non ultricies risus, ac finibus lorem. In quis ligula elementum, efficitur ligula sit amet, sodales orci. Nulla quis mi eu arcu eleifend ultrices. Ut hendrerit ante ut nisl convallis, in posuere enim iaculis. Vestibulum id dictum lacus. Sed vitae consequat dui, ut lobortis erat. Morbi efficitur faucibus tellus, sit amet sagittis libero blandit vitae. Aliquam erat volutpat. Pellentesque laoreet sodales finibus. In laoreet bibendum mi, eu bibendum eros tincidunt eget. Donec nec lorem auctor, cursus felis quis, tristique augue.
+
+Duis elementum nisi sit amet nulla luctus bibendum. Sed eu turpis sed turpis eleifend consequat. Phasellus a tempus lectus. Donec rutrum turpis eu egestas hendrerit. Aliquam placerat dapibus leo. Pellentesque venenatis mi vel imperdiet blandit. Aliquam venenatis lectus sit amet ex venenatis vehicula. Suspendisse potenti. Fusce interdum, ipsum id tincidunt cursus, tortor ipsum iaculis est, a placerat ipsum ligula vitae sem. Integer a justo congue, pulvinar quam nec, hendrerit nibh.
+
+Aliquam rhoncus cursus cursus. Vestibulum laoreet vulputate ex sit amet varius. Aliquam blandit sapien urna, vel ornare turpis tempor sit amet. Quisque ullamcorper ipsum dolor, a eleifend ex aliquet non. Nulla consequat metus ante, eget imperdiet est posuere ac. Aliquam id porta nibh. In ut auctor ligula. Curabitur tempus, ante a semper vestibulum, mauris tellus dignissim nunc, blandit feugiat elit nulla vitae nisl.
+
+Pellentesque fringilla ex nec ante maximus eleifend. Vivamus at tempor est. Nullam pellentesque nisl et sem vestibulum, at tempor est eleifend. Nunc ullamcorper lacus tortor, sit amet malesuada urna iaculis sit amet. Curabitur lectus turpis, pretium dictum quam eu, feugiat congue sapien. Nulla facilisis neque nec viverra porta. Maecenas mauris augue, porta ut massa ut, pharetra pellentesque sapien. Curabitur velit eros, feugiat et mauris id, vestibulum malesuada magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris commodo, ex ac pharetra commodo, eros purus viverra eros, quis iaculis odio massa eu felis. Ut tortor mi, vestibulum vel ligula non, aliquam porttitor nisi. Fusce pretium venenatis ipsum, vel commodo ante porta sit amet. Phasellus lectus ante, lobortis semper nibh sit amet, bibendum dictum arcu.</p>
+    </div>
+    <div class="container-3">
+      <header>some videos</header>
+      <ul id="menu">
+        <li id="current-video"><a href="TP.mp4">some video 1</a></li>
+        <li><a href="https://custom-html5-video.surge.sh/video.mp4">some video 2</a></li>
+        <li><a href="2.mp4">some video 3</a></li>
+        <li><a href="https://custom-html5-video.surge.sh/video.mp4">some video 4</a></li>
+        <li><a href="https://webdevtrick.com/wp-content/uploads/js-web-terminal.mp4?_=1">some video 5</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+ <!--
+This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
+-->
+<script src="https://replit.com/public/js/replit-badge.js" theme="orange" defer></script> 
+</body>
+
+</html>
